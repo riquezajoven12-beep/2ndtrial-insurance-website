@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-gray-900 bg-warm antialiased; }
+  h1, h2, h3, h4 { @apply font-serif; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold text-deep px-8 py-3.5 rounded-lg 
+           font-bold text-sm transition-all hover:bg-gold-light hover:-translate-y-0.5 
+           hover:shadow-lg cursor-pointer;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-transparent text-white px-8 py-3.5 
+           rounded-lg font-semibold text-sm border border-white/30 transition-all 
+           hover:border-white/60 hover:bg-white/5 cursor-pointer;
+  }
+  .btn-teal {
+    @apply inline-flex items-center gap-2 bg-teal text-white px-6 py-3 rounded-lg 
+           font-semibold text-sm transition-all hover:bg-teal-light hover:-translate-y-0.5 
+           cursor-pointer;
+  }
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl p-8 transition-all 
+           hover:-translate-y-1 hover:shadow-xl;
+  }
+  .section-label {
+    @apply text-xs font-bold text-teal uppercase tracking-widest mb-3 font-sans;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg text-sm font-sans 
+           outline-none transition-colors focus:border-teal bg-warm;
+  }
+  .admin-card {
+    @apply bg-white border border-gray-200 rounded-xl p-6;
+  }
+  .status-new { @apply bg-teal/10 text-teal; }
+  .status-progress { @apply bg-amber-100 text-amber-700; }
+  .status-done { @apply bg-green-100 text-green-700; }
+  .status-danger { @apply bg-red-100 text-red-700; }
+  .status-badge {
+    @apply inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+}
